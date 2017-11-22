@@ -1,0 +1,3 @@
+<App>
+	<Page ux:Name="Page1" Color="#8C6228" Background="#FDB64B" Opacity="1" />
+</App>

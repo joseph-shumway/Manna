@@ -1,0 +1,35 @@
+// This file was generated based on C:/Users/Shumcom/Documents/Fuse/Manna/hikr/build/Android/Preview/cache/ux13/MainView.g.uno.
+// WARNING: Changes might be lost if you edit this file directly.
+
+#pragma once
+#include <Uno.UX.Template.h>
+namespace g{namespace Fuse{namespace Reactive{struct EventBinding;}}}
+namespace g{namespace Uno{namespace UX{struct Property1;}}}
+namespace g{namespace Uno{namespace UX{struct Selector;}}}
+namespace g{struct MainView;}
+namespace g{struct MainView__Template;}
+
+namespace g{
+
+// public partial sealed class MainView.Template :5
+// {
+::g::Uno::UX::Template_type* MainView__Template_typeof();
+void MainView__Template__ctor_1_fn(MainView__Template* __this, ::g::MainView* parent, ::g::MainView* parentInstance);
+void MainView__Template__New1_fn(MainView__Template* __this, uObject** __retval);
+void MainView__Template__New2_fn(::g::MainView* parent, ::g::MainView* parentInstance, MainView__Template** __retval);
+
+struct MainView__Template : ::g::Uno::UX::Template
+{
+    uWeak< ::g::MainView*> __parent1;
+    uWeak< ::g::MainView*> __parentInstance1;
+    uStrong< ::g::Uno::UX::Property1*> __self_Text_inst1;
+    uStrong< ::g::Fuse::Reactive::EventBinding*> temp_eb0;
+    static ::g::Uno::UX::Selector __selector0_;
+    static ::g::Uno::UX::Selector& __selector0() { return MainView__Template_typeof()->Init(), __selector0_; }
+
+    void ctor_1(::g::MainView* parent, ::g::MainView* parentInstance);
+    static MainView__Template* New2(::g::MainView* parent, ::g::MainView* parentInstance);
+};
+// }
+
+} // ::g
