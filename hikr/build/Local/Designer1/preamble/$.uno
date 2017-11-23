@@ -12,7 +12,7 @@ namespace Outracks.Simulator
 		public GeneratedApplication()
 			: base(
 				new [] 
-				{new Uno.Net.IPEndPoint(Uno.Net.IPAddress.Parse("127.0.0.1"), 12124), new Uno.Net.IPEndPoint(Uno.Net.IPAddress.Parse("192.168.1.15"), 12124), new Uno.Net.IPEndPoint(Uno.Net.IPAddress.Parse("192.168.1.33"), 12124)},"C:\\Users\\Shumcom\\Documents\\Fuse\\hikr\\hikr.unoproj",new string[] 
+				{new Uno.Net.IPEndPoint(Uno.Net.IPAddress.Parse("127.0.0.1"), 12124), new Uno.Net.IPEndPoint(Uno.Net.IPAddress.Parse("192.168.1.15"), 12124), new Uno.Net.IPEndPoint(Uno.Net.IPAddress.Parse("192.168.1.33"), 12124)},"C:\\Users\\Shumcom\\Documents\\Fuse\\Manna\\hikr\\hikr.unoproj",new string[] 
 				{ })
 		{
 			Runtime.Bundle.Initialize("hikr");

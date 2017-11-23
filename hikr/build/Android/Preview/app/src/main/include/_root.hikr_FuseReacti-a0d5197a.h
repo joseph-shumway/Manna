@@ -11,7 +11,7 @@ namespace g{struct hikr_FuseReactiveEach_Items_Property;}
 
 namespace g{
 
-// internal sealed class hikr_FuseReactiveEach_Items_Property :1
+// internal sealed class hikr_FuseReactiveEach_Items_Property :19
 // {
 ::g::Uno::UX::Property1_type* hikr_FuseReactiveEach_Items_Property_typeof();
 void hikr_FuseReactiveEach_Items_Property__ctor_3_fn(hikr_FuseReactiveEach_Items_Property* __this, ::g::Fuse::Reactive::Each* obj, ::g::Uno::UX::Selector* name);

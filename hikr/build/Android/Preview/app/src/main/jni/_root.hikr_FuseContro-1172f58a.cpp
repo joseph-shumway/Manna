@@ -11,7 +11,7 @@ static uType* TYPES[1];
 
 namespace g{
 
-// internal sealed class hikr_FuseControlsButtonBase_Text_Property :9
+// internal sealed class hikr_FuseControlsButtonBase_Text_Property :27
 // {
 static void hikr_FuseControlsButtonBase_Text_Property_build(uType* type)
 {
@@ -40,52 +40,52 @@ static void hikr_FuseControlsButtonBase_Text_Property_build(uType* type)
     return type;
 }
 
-// public hikr_FuseControlsButtonBase_Text_Property(Fuse.Controls.ButtonBase obj, Uno.UX.Selector name) :12
+// public hikr_FuseControlsButtonBase_Text_Property(Fuse.Controls.ButtonBase obj, Uno.UX.Selector name) :30
 void hikr_FuseControlsButtonBase_Text_Property__ctor_3_fn(hikr_FuseControlsButtonBase_Text_Property* __this, ::g::Fuse::Controls::ButtonBase* obj, ::g::Uno::UX::Selector* name)
 {
     __this->ctor_3(obj, *name);
 }
 
-// public override sealed string Get(Uno.UX.PropertyObject obj) :14
+// public override sealed string Get(Uno.UX.PropertyObject obj) :32
 void hikr_FuseControlsButtonBase_Text_Property__Get1_fn(hikr_FuseControlsButtonBase_Text_Property* __this, ::g::Uno::UX::PropertyObject* obj, uString** __retval)
 {
     uStackFrame __("hikr_FuseControlsButtonBase_Text_Property", "Get(Uno.UX.PropertyObject)");
     return *__retval = uPtr(uCast< ::g::Fuse::Controls::ButtonBase*>(obj, ::TYPES[0/*Fuse.Controls.ButtonBase*/]))->Text(), void();
 }
 
-// public hikr_FuseControlsButtonBase_Text_Property New(Fuse.Controls.ButtonBase obj, Uno.UX.Selector name) :12
+// public hikr_FuseControlsButtonBase_Text_Property New(Fuse.Controls.ButtonBase obj, Uno.UX.Selector name) :30
 void hikr_FuseControlsButtonBase_Text_Property__New1_fn(::g::Fuse::Controls::ButtonBase* obj, ::g::Uno::UX::Selector* name, hikr_FuseControlsButtonBase_Text_Property** __retval)
 {
     *__retval = hikr_FuseControlsButtonBase_Text_Property::New1(obj, *name);
 }
 
-// public override sealed Uno.UX.PropertyObject get_Object() :13
+// public override sealed Uno.UX.PropertyObject get_Object() :31
 void hikr_FuseControlsButtonBase_Text_Property__get_Object_fn(hikr_FuseControlsButtonBase_Text_Property* __this, ::g::Uno::UX::PropertyObject** __retval)
 {
     return *__retval = __this->_obj, void();
 }
 
-// public override sealed void Set(Uno.UX.PropertyObject obj, string v, Uno.UX.IPropertyListener origin) :15
+// public override sealed void Set(Uno.UX.PropertyObject obj, string v, Uno.UX.IPropertyListener origin) :33
 void hikr_FuseControlsButtonBase_Text_Property__Set1_fn(hikr_FuseControlsButtonBase_Text_Property* __this, ::g::Uno::UX::PropertyObject* obj, uString* v, uObject* origin)
 {
     uStackFrame __("hikr_FuseControlsButtonBase_Text_Property", "Set(Uno.UX.PropertyObject,string,Uno.UX.IPropertyListener)");
     uPtr(uCast< ::g::Fuse::Controls::ButtonBase*>(obj, ::TYPES[0/*Fuse.Controls.ButtonBase*/]))->SetText(v, origin);
 }
 
-// public override sealed bool get_SupportsOriginSetter() :16
+// public override sealed bool get_SupportsOriginSetter() :34
 void hikr_FuseControlsButtonBase_Text_Property__get_SupportsOriginSetter_fn(hikr_FuseControlsButtonBase_Text_Property* __this, bool* __retval)
 {
     return *__retval = true, void();
 }
 
-// public hikr_FuseControlsButtonBase_Text_Property(Fuse.Controls.ButtonBase obj, Uno.UX.Selector name) [instance] :12
+// public hikr_FuseControlsButtonBase_Text_Property(Fuse.Controls.ButtonBase obj, Uno.UX.Selector name) [instance] :30
 void hikr_FuseControlsButtonBase_Text_Property::ctor_3(::g::Fuse::Controls::ButtonBase* obj, ::g::Uno::UX::Selector name)
 {
     ctor_2(name);
     _obj = obj;
 }
 
-// public hikr_FuseControlsButtonBase_Text_Property New(Fuse.Controls.ButtonBase obj, Uno.UX.Selector name) [static] :12
+// public hikr_FuseControlsButtonBase_Text_Property New(Fuse.Controls.ButtonBase obj, Uno.UX.Selector name) [static] :30
 hikr_FuseControlsButtonBase_Text_Property* hikr_FuseControlsButtonBase_Text_Property::New1(::g::Fuse::Controls::ButtonBase* obj, ::g::Uno::UX::Selector name)
 {
     hikr_FuseControlsButtonBase_Text_Property* obj1 = (hikr_FuseControlsButtonBase_Text_Property*)uNew(hikr_FuseControlsButtonBase_Text_Property_typeof());

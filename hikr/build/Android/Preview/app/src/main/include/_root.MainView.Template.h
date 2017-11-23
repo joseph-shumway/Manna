@@ -3,8 +3,6 @@
 
 #pragma once
 #include <Uno.UX.Template.h>
-namespace g{namespace Fuse{namespace Reactive{struct EventBinding;}}}
-namespace g{namespace Uno{namespace UX{struct Property1;}}}
 namespace g{namespace Uno{namespace UX{struct Selector;}}}
 namespace g{struct MainView;}
 namespace g{struct MainView__Template;}
@@ -22,8 +20,6 @@ struct MainView__Template : ::g::Uno::UX::Template
 {
     uWeak< ::g::MainView*> __parent1;
     uWeak< ::g::MainView*> __parentInstance1;
-    uStrong< ::g::Uno::UX::Property1*> __self_Text_inst1;
-    uStrong< ::g::Fuse::Reactive::EventBinding*> temp_eb0;
     static ::g::Uno::UX::Selector __selector0_;
     static ::g::Uno::UX::Selector& __selector0() { return MainView__Template_typeof()->Init(), __selector0_; }
 

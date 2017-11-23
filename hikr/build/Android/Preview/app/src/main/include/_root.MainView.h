@@ -4,8 +4,7 @@
 #pragma once
 #include <Fuse.App.h>
 #include <Fuse.IProperties.h>
-namespace g{namespace Uno{namespace UX{struct NameTable;}}}
-namespace g{namespace Uno{namespace UX{struct Property1;}}}
+namespace g{namespace Fuse{namespace Navigation{struct Router;}}}
 namespace g{namespace Uno{namespace UX{struct Selector;}}}
 namespace g{struct MainView;}
 
@@ -20,19 +19,9 @@ void MainView__New1_fn(MainView** __retval);
 
 struct MainView : ::g::Fuse::App
 {
-    uStrong< ::g::Uno::UX::Property1*> temp_Items_inst;
-    uStrong< ::g::Uno::UX::Property1*> temp1_Value_inst;
-    uStrong< ::g::Uno::UX::Property1*> temp2_Value_inst;
-    uStrong< ::g::Uno::UX::Property1*> temp3_Value_inst;
-    uStrong< ::g::Uno::UX::Property1*> temp4_Value_inst;
-    uStrong< ::g::Uno::UX::Property1*> temp5_Value_inst;
-    uStrong< ::g::Uno::UX::NameTable*> __g_nametable1;
-    static uSStrong<uArray*> __g_static_nametable1_;
-    static uSStrong<uArray*>& __g_static_nametable1() { return MainView_typeof()->Init(), __g_static_nametable1_; }
+    uStrong< ::g::Fuse::Navigation::Router*> router;
     static ::g::Uno::UX::Selector __selector0_;
     static ::g::Uno::UX::Selector& __selector0() { return MainView_typeof()->Init(), __selector0_; }
-    static ::g::Uno::UX::Selector __selector1_;
-    static ::g::Uno::UX::Selector& __selector1() { return MainView_typeof()->Init(), __selector1_; }
 
     void ctor_4();
     void InitializeUX();

@@ -90,6 +90,13 @@ ipch/
 *.vspx
 *.sap
 
+
+
+build
+hikr/build
+
+
+
 # TFS 2012 Local Workspace
 $tf/
 

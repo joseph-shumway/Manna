@@ -40,3 +40,5 @@ var hikes = [
 			comments: "Too long, too hot. Also that snakebite wasn't very fun."
 		}
 		];
+
+		module.exports = hikes;

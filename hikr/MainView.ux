@@ -1,76 +1,13 @@
-<App>
+<App Background="#022328">
+	<iOS.StatusBarConfig Style="Light" />
+	<Android.StatusBarConfig Color="#022328" />
+
+	<Router ux:Name="router" />
+
 	<ClientPanel>
-
-
-
-
-
-		<JavaScript>
-		
-		
-
-
-		var Observable = require("FuseJS/Observable");
-		var hike = Observable();
-
-		var name = hike.map(function(x) { return x.name; });
-		var location = hike.map(function(x) { return x.location; });
-		var distance = hike.map(function(x) { return x.distance; });
-		var rating = hike.map(function(x) { return x.rating; });
-		var comments = hike.map(function(x) { return x.comments; });
-
-
-
-		module.exports = {
-			hikes: hikes,
-
-			name: name,
-			location: location,
-			distance: distance,
-			rating: rating,
-			comments: comments,
-			chooseHike: chooseHike
-		};
-
-
-
-
-		function chooseHike(arg) {
-			hike.value = arg.data;
-		}
-
-		</JavaScript>
-
-
-
-
-
-
-		<ScrollView>
-			<StackPanel>
-
-				<Each Items="{hikes}">
-					<Button Text="{name}" Clicked="{chooseHike}"/>
-				</Each>
-
-				<Text>Name:</Text>
-				<Text Value="{name}" />
-
-				<Text>Location:</Text>
-				<TextBox Value="{location}" />
-
-				<Text>Distance (km)</Text>
-				<TextBox Value="{distance}"  InputHint="Decimal"/>
-
-				<Text>Rating:</Text>
-				<TextBox Value="{rating}" InputHint="Integer"/>
-
-				<Text>Comments:</Text>
-				<TextView Value="{comments}" TextWrapping="Wrap"/>
-
-
-
-			</StackPanel>
-		</ScrollView>
+		<Navigator DefaultPath="home">
+			<HomePage ux:Template="home" router="router" />
+			<EditHikePage ux:Template="editHike" router="router" />
+		</Navigator>
 	</ClientPanel>
 </App>

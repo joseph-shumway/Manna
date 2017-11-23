@@ -56,11 +56,15 @@ namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Pr
 namespace g{uClassType* FuseScriptingJavaScript_bundle_typeof();}
 namespace g{uClassType* FuseText_bundle_typeof();}
 namespace g{uClassType* UnoCore_bundle_typeof();}
-namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* hikr_FuseControlsButtonBase_Text_Property_typeof();}
+namespace g{namespace Fuse{namespace Controls{struct Panel_type;}} ::g::Fuse::Controls::Panel_type* EditHikePage_typeof();}
+namespace g{uClassType* hikr_bundle_typeof();}
 namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* hikr_FuseControlsTextControl_Value_Property_typeof();}
 namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* hikr_FuseControlsTextInputControl_Value_Property_typeof();}
 namespace g{namespace Uno{namespace UX{struct Property1_type;}} ::g::Uno::UX::Property1_type* hikr_FuseReactiveEach_Items_Property_typeof();}
+namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* HomePage__Template_typeof();}
+namespace g{namespace Fuse{namespace Controls{struct Panel_type;}} ::g::Fuse::Controls::Panel_type* HomePage_typeof();}
 namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* MainView__Template_typeof();}
+namespace g{namespace Uno{namespace UX{struct Template_type;}} ::g::Uno::UX::Template_type* MainView__Template1_typeof();}
 namespace g{namespace Fuse{struct AppBase_type;} ::g::Fuse::AppBase_type* MainView_typeof();}
 namespace g{namespace OpenGL{uClassType* GL_typeof();}}
 namespace g{namespace OpenGL{uStructType* GLBufferHandle_typeof();}}
@@ -2122,11 +2126,15 @@ void uInitRtti()
         (uType*(*)())&::g::FuseScriptingJavaScript_bundle_typeof,
         (uType*(*)())&::g::FuseText_bundle_typeof,
         (uType*(*)())&::g::UnoCore_bundle_typeof,
-        (uType*(*)())&::g::hikr_FuseControlsButtonBase_Text_Property_typeof,
+        (uType*(*)())&::g::EditHikePage_typeof,
+        (uType*(*)())&::g::hikr_bundle_typeof,
         (uType*(*)())&::g::hikr_FuseControlsTextControl_Value_Property_typeof,
         (uType*(*)())&::g::hikr_FuseControlsTextInputControl_Value_Property_typeof,
         (uType*(*)())&::g::hikr_FuseReactiveEach_Items_Property_typeof,
+        (uType*(*)())&::g::HomePage__Template_typeof,
+        (uType*(*)())&::g::HomePage_typeof,
         (uType*(*)())&::g::MainView__Template_typeof,
+        (uType*(*)())&::g::MainView__Template1_typeof,
         (uType*(*)())&::g::MainView_typeof,
         (uType*(*)())&::g::OpenGL::GL_typeof,
         (uType*(*)())&::g::OpenGL::GLBufferHandle_typeof,

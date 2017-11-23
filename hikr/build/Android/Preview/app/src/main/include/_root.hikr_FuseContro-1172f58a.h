@@ -11,7 +11,7 @@ namespace g{struct hikr_FuseControlsButtonBase_Text_Property;}
 
 namespace g{
 
-// internal sealed class hikr_FuseControlsButtonBase_Text_Property :9
+// internal sealed class hikr_FuseControlsButtonBase_Text_Property :27
 // {
 ::g::Uno::UX::Property1_type* hikr_FuseControlsButtonBase_Text_Property_typeof();
 void hikr_FuseControlsButtonBase_Text_Property__ctor_3_fn(hikr_FuseControlsButtonBase_Text_Property* __this, ::g::Fuse::Controls::ButtonBase* obj, ::g::Uno::UX::Selector* name);

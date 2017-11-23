@@ -16639,7 +16639,7 @@ Number* Number::New4()
 // C:\Users\Shumcom\AppData\Local\Fusetools\Packages\Fuse.Controls.Navigation\1.4.0\Page.uno
 // -----------------------------------------------------------------------------------------
 
-// public sealed class Page :46
+// public class Page :46
 // {
 static void Page_build(uType* type)
 {
