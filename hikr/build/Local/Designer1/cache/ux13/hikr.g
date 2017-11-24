@@ -8,4 +8,5 @@ build/Local/Designer1/cache/ux13/EditHikePage.g.uno
 build/Local/Designer1/cache/ux13/TitleText.g.uno
 build/Local/Designer1/cache/ux13/HomePage.g.uno
 build/Local/Designer1/cache/ux13/Separator.g.uno
+build/Local/Designer1/cache/ux13/SplashPage.g.uno
 build/Local/Designer1/cache/ux13/hikr.unoproj.g.uno

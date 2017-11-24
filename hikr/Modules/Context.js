@@ -3,15 +3,13 @@ var Backend = require("./Backend");
 
 var hikes = Observable();
 
-Backend.getHikes() 
-.then(function(newHikes) {
-	hikes.replaceAll(newHikes);
-
-})
-.catch(function(error) {
-	console.log("Couldn;t get hikes: " + error);
-});
-
+Backend.getHikes()
+	.then(function(newHikes) {
+		hikes.replaceAll(newHikes);
+	})
+	.catch(function(error) {
+		console.log("Couldn't get hikes: " + error);
+	});
 
 function updateHike(id, name, location, distance, rating, comments) {
 	for (var i = 0; i < hikes.length; i++) {
@@ -27,9 +25,9 @@ function updateHike(id, name, location, distance, rating, comments) {
 		}
 	}
 	Backend.updateHike(id, name, location, distance, rating, comments)
-	.catch(function(error) {
-		console.log("Couldn't update hike: " + id);
-	});
+		.catch(function(error) {
+			console.log("Couldn't update hike: " + id);
+		});
 }
 
 module.exports = {

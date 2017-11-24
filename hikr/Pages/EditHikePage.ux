@@ -11,21 +11,21 @@
 
 		<ScrollView>
 			<StackPanel ItemSpacing="10" Padding="10">
-				<hikr.Text ux:Class="TitleText" Opacity=".6" Margin="0,0,0,5" />
+				<hikr.Text ux:Class="TitleText" Opacity=".6" Margin="0,0,0,5" TextAlignment="Center" TextWrapping="Wrap" Alignment="Center" />
 
 				<StackPanel>
 					<TitleText>Name:</TitleText>
-					<hikr.TextBox Value="{name}" />
+					<hikr.TextBox Value="{name}" TextWrapping="NoWrap" Alignment="Default" TextAlignment="Center" />
 				</StackPanel>
 
 				<StackPanel>
 					<TitleText>Location:</TitleText>
-					<hikr.TextBox Value="{location}" />
+					<hikr.TextBox Value="{location}" TextAlignment="Center" />
 				</StackPanel>
 
 				<StackPanel>
 					<TitleText>Distance (km):</TitleText>
-					<hikr.TextBox Value="{distance}" InputHint="Decimal" />
+					<hikr.TextBox Value="{distance}" InputHint="Decimal" TextAlignment="Center" />
 				</StackPanel>
 
 				<StackPanel>
