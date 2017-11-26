@@ -1,0 +1,15 @@
+<App>
+	<ClientPanel>
+
+		<Router ux:Name="router" />
+
+		<Navigator DefaultPath="splash">
+			<SplashPage ux:Template="splash" router="router"/>
+			<HomePage ux:Template="home" router="router" />
+
+
+		</Navigator>
+
+	</ClientPanel>
+
+</App>

@@ -1,0 +1,27 @@
+<Page ux:Class="SplashPage">
+	<Router ux:Dependency="router" />
+
+<JavaScript File="SplashPage.js" />
+
+	<DockPanel ClipToBounds="true" Background="#ffb84d">
+
+
+		
+		<Text FontSize="75" TextColor="White" Value="Manna" Alignment="Center" Padding="0,200,0,0">
+			<Font File="../Assets/Stya.ttf" />
+		</Text>
+
+		<Video Layer="Background" Opacity=".7" File="../Assets/Montage.mp4" AutoPlay="true" IsLooping="true" StretchMode="UniformToFill">
+			<Blur Radius="1.5" />
+		</Video>
+
+		<DockPanel>
+			<Grid>
+				<Manna.Button Alignment="Center" MinWidth="200" MinHeight="50" Y="150" Opacity=".75" Text="Menu" FontSize="20" Clicked="{goToHomePage}" > 
+				</Manna.Button>
+			</Grid>
+
+			<Manna.Border/>
+		</DockPanel>
+	</DockPanel>
+</Page>
