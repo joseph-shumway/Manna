@@ -1,17 +1,17 @@
-<Panel ux:Class="Manna.Button" Margin="10" Padding="10" FontSize="16" Opacity="1">
+<Panel ux:Class="Manna.Button" Margin="10" Padding="10" FontSize="16" ButtonOpacity="1" >
 
 	<string ux:Property="Text" />
 	<float ux:Property="FontSize" />
-	<string ux:Property="Color" />
+	<string ux:Property="ButtonColor" />
+	<string ux:Property="TextColor"/>
+	<float ux:Property="ButtonOpacity"/>
+	<float ux:Property="TextOpacity"/>
 
-	<Rectangle Layer="Background" Color="White" CornerRadius="4" Opacity="{ReadProperty Opacity}">
-
-		<DropShadow Angle="135"/>
+	<Rectangle Layer="Background" Color="{ReadProperty ButtonColor}" CornerRadius="50" Opacity="{ReadProperty ButtonOpacity}">
 
 	</Rectangle>
 
-	<Text Value="{ReadProperty Text}" Alignment="Center" TextColor="White" FontSize="{ReadProperty FontSize}">
-		<DropShadow Color="#555555" Angle="135" Distance="3"/>
+	<Text Value="{ReadProperty Text}" Alignment="Center" TextColor="{ReadProperty TextColor}" FontSize="{ReadProperty FontSize}" Opacity="{ReadProperty TextOpacity}">
 	</Text>
 
 	<WhilePressed>

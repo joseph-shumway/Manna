@@ -1,7 +1,11 @@
-function goToHomePage() {
-	router.push("home");
+var Observable = require("FuseJS/Observable");
+var videoPosition = Observable('');
+
+function goToMenuPage() {
+	router.push("menu");
 }
 
 module.exports= {
-	goToHomePage: goToHomePage
+	goToMenuPage: goToMenuPage,
+	videoPosition: videoPosition
 };

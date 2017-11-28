@@ -8,4 +8,6 @@
 
 	<Rectangle Layer="Background" Color="White" MaxWidth="1800" Alignment="Bottom" Margin="0, 0, 0, 8" Padding="0, 0, 0, 8" MaxHeight="5" />
 
+	
+
 </Panel>

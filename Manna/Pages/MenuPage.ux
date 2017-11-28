@@ -1,0 +1,12 @@
+<DockPanel ux:Class="MenuPage">
+	<Router ux:Dependency="router"/>
+
+	<JavaScript File="../Components/Cards.js"/>
+
+	<PageControl ux:Name="cards" Padding="24,32,24,8">
+		<Each Items="{cards}">
+			<Manna.Card Item="{item}" Color="Black" Cover="{cover}"/>
+			<Text Value="{cover}" Alignment="Center"/>
+		</Each>
+	</PageControl>
+</DockPanel>

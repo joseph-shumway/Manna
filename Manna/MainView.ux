@@ -1,15 +1,15 @@
 <App>
-	<ClientPanel>
+	<Android.StatusBarConfig Color="#0003" IsVisible="True" />
 
 		<Router ux:Name="router" />
 
 		<Navigator DefaultPath="splash">
 			<SplashPage ux:Template="splash" router="router"/>
 			<HomePage ux:Template="home" router="router" />
+			<MenuPage ux:Template="menu" router="router" />
 
 
 		</Navigator>
 
-	</ClientPanel>
 
 </App>

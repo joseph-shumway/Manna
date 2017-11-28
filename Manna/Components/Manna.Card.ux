@@ -1,0 +1,27 @@
+<Page ux:Class="Manna.Card">
+
+
+	<JavaScript File="Cards.js"/>
+	<string ux:Property="Item" />
+	<string ux:Property="Description" />
+	<string ux:Property="Cover" />
+
+	<Panel Dock="Top" Height="200">
+
+		<Rectangle ux:Name="image" CornerRadius="1" Color="#abcdef" Alignment="HorizontalCenter" Width="168">
+
+
+
+			<LayoutAnimation>
+				<Move Vector="1"				RelativeTo="PositionChange" DurationBack=".4" Easing="QuarticOut" EasingBack="QuarticIn"/>
+			</LayoutAnimation>
+
+			<ImageFill File="{ReadProperty Cover}" StretchMode="UniformToFill" WrapMode="ClampToEdge"/>
+			<Stroke Width="1" Color="#fff3"/>
+			<Shadow/>
+		</Rectangle>
+	</Panel>
+
+
+
+</Page>
