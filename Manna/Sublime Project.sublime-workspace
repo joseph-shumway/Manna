@@ -1,0 +1,687 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Dur",
+				"DurationBack\t"
+			],
+			[
+				"Lay",
+				"LayoutAnimation\t"
+			],
+			[
+				"Imag",
+				"ImageFill\t"
+			],
+			[
+				"Ja",
+				"JavaScript\t"
+			],
+			[
+				"Page",
+				"PageControl\t"
+			],
+			[
+				"empt",
+				"WhileNotEmpty\t"
+			],
+			[
+				"Dr",
+				"DropShadow\t"
+			],
+			[
+				"ce",
+				"TopCenter\t"
+			],
+			[
+				"C",
+				"CenterLeft\t"
+			],
+			[
+				"X",
+				"MaxWidth\t"
+			],
+			[
+				"S",
+				"Spread\t"
+			],
+			[
+				"Col",
+				"TextColor\t"
+			],
+			[
+				"Font",
+				"FontSize\t"
+			],
+			[
+				"Uni",
+				"UniformToFill\t"
+			],
+			[
+				"Is",
+				"IsLooping\t"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/Users/chris/Documents/Repos/Manna/hikr/Pages/EditHikePage.ux",
+			"settings":
+			{
+				"buffer_size": 1266,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "MainView.ux",
+			"settings":
+			{
+				"buffer_size": 315,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Pages/SplashPage.ux",
+			"settings":
+			{
+				"buffer_size": 910,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Pages/SplashPage.js",
+			"settings":
+			{
+				"buffer_size": 214,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Pages/MenuPage.ux",
+			"settings":
+			{
+				"buffer_size": 1628,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<Page ux:Class=\"Manna.Card\">\n\n\n\t<string ux:Property=\"Item\" />\n\t<string ux:Property=\"Description\" />\n\t<string ux:Property=\"Cover\" />\n\n\t<Panel Dock=\"Top\" Height=\"200\">\n\n\t\t<Rectangle ux:Name=\"image\" CornerRadius=\"1\" Color=\"#abcdef\" Alignment=\"HorizontalCenter\" Width=\"168\">\n\n\n\n\t\t\t<LayoutAnimation>\n\t\t\t\t<Move Vector=\"1\"\t\t\t\tRelativeTo=\"PositionChange\" DurationBack=\".4\" Easing=\"QuarticOut\" EasingBack=\"QuarticIn\"/>\n\t\t\t</LayoutAnimation>\n\n\t\t\t<ImageFill File=\"{ReadProperty Cover}\" StretchMode=\"UniformToFill\" WrapMode=\"ClampToEdge\"/>\n\t\t\t<Stroke Width=\"1\" Color=\"#fff3\"/>\n\t\t\t<Shadow/>\n\t\t</Rectangle>\n\t</Panel>\n\n\n\n</Page>",
+			"file": "Components/Manna.Card.ux",
+			"file_size": 2320,
+			"file_write_time": 131563516363971639,
+			"settings":
+			{
+				"buffer_size": 613,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Components/Cards.js",
+			"settings":
+			{
+				"buffer_size": 356,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Pages/HomePage.ux",
+			"settings":
+			{
+				"buffer_size": 72,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Components/Manna.Button.ux",
+			"settings":
+			{
+				"buffer_size": 722,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<DockPanel ux:Class=\"Card\">\n\t<string ux:Property=\"Title\" />\n\t<string ux:Property=\"Description\" />\n\t<string ux:Property=\"Artist\" />\n\t<string ux:Property=\"ArtistPic\" />\n\t<string ux:Property=\"Cover\" />\n\t<string ux:Property=\"Albums\" />\n\t<float4 ux:Property=\"TopColor\" />\n\t<float4 ux:Property=\"BottomColor\" />\n\n\t<WhileInactive>\n\t\t<Set folderOpen.Value=\"false\" />\n\t\t<Set recordSpinning.Value=\"false\" />\n\t</WhileInactive>\n\n\t<DockPanel>\n\n\t\t<Panel Dock=\"Top\" Height=\"200\">\n\n\t\t\t<Panel Margin=\"16\" MaxWidth=\"320\">\n\t\t\t\t<WhileTrue ux:Name=\"folderOpen\">\n\t\t\t\t\t<Change folder.Alignment=\"Left\" />\n\t\t\t\t\t<Change vinyl.Alignment=\"Right\" />\n\t\t\t\t</WhileTrue>\n\n\t\t\t\t<WhileTrue ux:Name=\"recordSpinning\">\n\t\t\t\t\t<Spin Target=\"disc\" Frequency=\"0.8\" />\n\t\t\t\t</WhileTrue>\n\n\t\t\t\t<Rectangle ux:Name=\"folder\" CornerRadius=\"1\" Color=\"#fff8\" Alignment=\"HorizontalCenter\" Width=\"168\">\n\t\t\t\t\t<LayoutAnimation>\n\t\t\t\t\t\t<Move Vector=\"1\" RelativeTo=\"PositionChange\" DurationBack=\"0.4\" Easing=\"QuarticOut\" EasingBack=\"QuarticIn\" />\n\t\t\t\t\t</LayoutAnimation>\n\t\t\t\t\t<Tapped>\n\t\t\t\t\t\t<Toggle Target=\"folderOpen\" />\n\t\t\t\t\t</Tapped>\n\t\t\t\t\t<ImageFill File=\"{ReadProperty Cover}\" StretchMode=\"UniformToFill\" WrapMode=\"ClampToEdge\" />\n\t\t\t\t\t<Stroke Width=\"1\" Color=\"#FFF3\" />\n\t\t\t\t\t<Shadow />\n\t\t\t\t</Rectangle>\n\n\t\t\t\t<Panel ux:Name=\"vinyl\" Alignment=\"HorizontalCenter\" Width=\"168\">\n\t\t\t\t\t<LayoutAnimation>\n\t\t\t\t\t\t<Move Vector=\"1\" RelativeTo=\"PositionChange\" DurationBack=\"0.4\" Easing=\"QuarticOut\" EasingBack=\"QuarticIn\" />\n\t\t\t\t\t</LayoutAnimation>\n\t\t\t\t\t<Tapped>\n\t\t\t\t\t\t<Toggle Target=\"recordSpinning\" />\n\t\t\t\t\t</Tapped>\n\t\t\t\t\t<Circle ux:Name=\"disc\" Margin=\"2\">\n\t\t\t\t\t\t<Image File=\"Assets/vinyl.png\" />\n\t\t\t\t\t\t<Circle Width=\"50%\" Height=\"50%\">\n\t\t\t\t\t\t\t<ImageFill File=\"{ReadProperty Cover}\" StretchMode=\"UniformToFill\" WrapMode=\"ClampToEdge\" />\n\t\t\t\t\t\t</Circle>\n\t\t\t\t\t</Circle>\n\t\t\t\t\t<Circle Color=\"#0004\" Smoothness=\"24\" />\n\t\t\t\t</Panel>\n\n\t\t\t</Panel>\n\n\t\t\t<Rectangle CornerRadius=\"4,4,0,0\" Color=\"#0002\" />\n\t\t\t<Rectangle CornerRadius=\"4,4,0,0\">\n\t\t\t\t<LinearGradient StartPoint=\"0,0\" EndPoint=\"0,1\" AngleDegrees=\"72\">\n\t\t\t\t\t<GradientStop Offset=\"0\" Color=\"{ReadProperty BottomColor}\" />\n\t\t\t\t\t<GradientStop Offset=\"1\" Color=\"{ReadProperty TopColor}\" />\n\t\t\t\t</LinearGradient>\n\t\t\t</Rectangle>\n\n\t\t</Panel>\n\n\t\t<Grid Rows=\"1*,auto\">\n\t\t\t<ScrollView Padding=\"24,0\">\n\t\t\t\t<StackPanel ItemSpacing=\"8\" Margin=\"0,24,0,0\">\n\t\t\t\t\t<Text Value=\"{ReadProperty Title}\" Color=\"#000\" FontSize=\"22\" TextWrapping=\"Wrap\" />\n\t\t\t\t\t<Text Value=\"{ReadProperty Description}\" Color=\"#0008\" FontSize=\"15\" TextWrapping=\"Wrap\" />\n\t\t\t\t</StackPanel>\n\t\t\t</ScrollView>\n\t\t\t<StackPanel Margin=\"24\" ItemSpacing=\"16\">\n\t\t\t\t<Grid Height=\"48\" Columns=\"auto,1*,auto\" CellSpacing=\"8\">\n\t\t\t\t\t<Rectangle Width=\"48\" CornerRadius=\"4\">\n\t\t\t\t\t\t<ImageFill File=\"{ReadProperty ArtistPic}\" StretchMode=\"UniformToFill\" WrapMode=\"ClampToEdge\" />\n\t\t\t\t\t</Rectangle>\n\t\t\t\t\t<Text Value=\"{ReadProperty Artist}\" Alignment=\"CenterLeft\" Color=\"#000a\" FontSize=\"18\" MaxWidth=\"120\" TextWrapping=\"Wrap\" />\n\t\t\t\t\t<StackPanel Alignment=\"VerticalCenter\" Orientation=\"Horizontal\">\n\t\t\t\t\t\t<Text Value=\"{ReadProperty Albums} Albums\" Color=\"#000c\" FontSize=\"15\" />\n\t\t\t\t\t\t<Panel Width=\"14\">\n\t\t\t\t\t\t\t<Rectangle Color=\"#fff\" Width=\"7\" Alignment=\"Left\" />\n\t\t\t\t\t\t\t<Rectangle Color=\"#759ae7\" Width=\"10\" Height=\"10\">\n\t\t\t\t\t\t\t\t<Rotation Degrees=\"45\" />\n\t\t\t\t\t\t\t</Rectangle>\n\t\t\t\t\t\t</Panel>\n\t\t\t\t\t</StackPanel>\n\t\t\t\t</Grid>\n\t\t\t\t<Panel Height=\"48\">\n\t\t\t\t\t<Text Value=\"ORDER VINYL\" Alignment=\"Center\" FontSize=\"20\" Color=\"#fff\" />\n\t\t\t\t\t<Rectangle Color=\"#759ae7\" CornerRadius=\"4\" />\n\t\t\t\t</Panel>\n\t\t\t</StackPanel>\n\t\t\t<Rectangle Layer=\"Background\" CornerRadius=\"0,0,4,4\" Color=\"#FFF\" />\n\t\t</Grid>\n\n\t\t<Shadow Distance=\"32\" Size=\"16\" />\n\n\t</DockPanel>\n\n\t<BottomBarBackground Dock=\"Bottom\" />\n\t<Panel Height=\"56\" Dock=\"Bottom\" />\n\n</DockPanel>\n",
+			"file": "/C/Users/chris/AppData/Local/Temp/Rar$DIa6336.35049/Card.ux",
+			"file_size": 3757,
+			"file_write_time": 131552537420000000,
+			"settings":
+			{
+				"buffer_size": 3757,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<App>\n\t<iOS.StatusBarConfig Style=\"Light\" />\n\n\t<JavaScript>\n\t\tvar cards = [\n\t\t\t{\n\t\t\t\ttitle: \"FREE LIMITED LP\",\n\t\t\t\tdescription: \"Despite the title, Hundredth's third LP Free doesn't feel liberating by any means. There hasn't been a reinvention of t...\",\n\t\t\t\tartist: \"Hundredth\",\n\t\t\t\tartistPic: \"Assets/artist1.jpeg\",\n\t\t\t\tcover: \"Assets/1.jpg\",\n\t\t\t\talbums: \"4\",\n\t\t\t\ttopColor: \"#cdb8b5\",\n\t\t\t\tbottomColor: \"#4f3250\"\n\t\t\t},\n\t\t\t{\n\t\t\t\ttitle: \"BETTER ASH THAN DUST\",\n\t\t\t\tdescription: \"OC melodic-hardcore stalwarts band have never been ones to shy away from their poli...\",\n\t\t\t\tartist: \"Stick To Your Guns\",\n\t\t\t\tartistPic: \"Assets/artist2.jpeg\",\n\t\t\t\tcover: \"Assets/2.jpg\",\n\t\t\t\talbums: \"6\",\n\t\t\t\ttopColor: \"#8dabe1\",\n\t\t\t\tbottomColor: \"#092759\"\n\t\t\t},\n\t\t\t{\n\t\t\t\ttitle: \"SHOKKA\",\n\t\t\t\tdescription: \"In short, the brutal beatdown crew have finally discovered a crucial element lifting their expression from a nonsens...\",\n\t\t\t\tartist: \"Nasty\",\n\t\t\t\tartistPic: \"Assets/artist3.jpeg\",\n\t\t\t\tcover: \"Assets/3.jpg\",\n\t\t\t\talbums: \"2\",\n\t\t\t\ttopColor: \"#ffd181\",\n\t\t\t\tbottomColor: \"#7f2525\"\n\t\t\t}\n\t\t];\n\t\tmodule.exports = {\n\t\t\tcards: cards\n\t\t};\n\t</JavaScript>\n\n\t<DockPanel>\n\n\t\t<StackPanel Dock=\"Top\" Color=\"#0003\">\n\t\t\t<StatusBarBackground />\n\t\t\t<Panel Height=\"56\">\n\t\t\t\t<StackPanel Orientation=\"Horizontal\" Alignment=\"CenterLeft\" Margin=\"16\" ItemSpacing=\"4\">\n\t\t\t\t\t<Image File=\"Assets/back.png\" />\n\t\t\t\t\t<Text Value=\"Media\" Alignment=\"VerticalCenter\" Color=\"#fff\" FontSize=\"16\" />\n\t\t\t\t</StackPanel>\n\t\t\t\t<Text Value=\"Vinyls\" Alignment=\"Center\" Color=\"#FFF\" FontSize=\"20\" />\n\t\t\t\t<Image File=\"Assets/star.png\" Alignment=\"CenterRight\" Margin=\"16\" />\n\t\t\t</Panel>\n\t\t</StackPanel>\n\n\t\t<PageControl ux:Name=\"cards\" Padding=\"24,32,24,8\">\n\t\t\t<Each Items=\"{cards}\">\n\t\t\t\t<Card Title=\"{title}\" Description=\"{description}\" Artist=\"{artist}\"\n\t\t\t\t\t\tArtistPic=\"{artistPic}\" Cover=\"{cover}\" Albums=\"{albums}\"\n\t\t\t\t\t\tTopColor=\"{topColor}\" BottomColor=\"{bottomColor}\">\n\t\t\t\t\t<WhileActive Threshold=\"0.5\">\n\t\t\t\t\t\t<Set topColor.Value=\"{topColor}\" />\n\t\t\t\t\t\t<Set bottomColor.Value=\"{bottomColor}\" />\n\t\t\t\t\t</WhileActive>\n\t\t\t\t</Card>\n\t\t\t</Each>\n\t\t</PageControl>\n\n\t\t<StackPanel Layer=\"Background\" Alignment=\"Bottom\">\n\t\t\t<PageIndicator Height=\"56\" Navigation=\"cards\" Alignment=\"Center\">\n\t\t\t\t<StackLayout ItemSpacing=\"12\" Orientation=\"Horizontal\" />\n\t\t\t\t<Panel ux:Template=\"Dot\">\n\t\t\t\t\t<DeactivatingAnimation>\n\t\t\t\t\t\t<Scale Factor=\"0.8\" />\n\t\t\t\t\t\t<Change indicator.Opacity=\"0.4\" />\n\t\t\t\t\t\t<Rotate Degrees=\"360\" />\n\t\t\t\t\t</DeactivatingAnimation>\n\t\t\t\t\t<Circle ux:Name=\"indicator\" Width=\"12\" Height=\"12\" Color=\"#fff\">\n\t\t\t\t\t\t<Rectangle Width=\"2\" Height=\"7\" Color=\"#0008\" CornerRadius=\"1\">\n\t\t\t\t\t\t\t<Translation Vector=\"-2,-2,0\" />\n\t\t\t\t\t\t\t<Rotation Degrees=\"-45\" />\n\t\t\t\t\t\t</Rectangle>\n\t\t\t\t\t</Circle>\n\t\t\t\t</Panel>\n\t\t\t</PageIndicator>\n\t\t\t<BottomBarBackground />\n\t\t</StackPanel>\n\n\t</DockPanel>\n\n\t<Attractor ux:Name=\"topColor\" Target=\"colorTop.Color\" Value=\"#cdb8b5\" Type=\"Easing\" Duration=\"0.2\" DurationExp=\"0\" />\n\t<Attractor ux:Name=\"bottomColor\" Target=\"colorBottom.Color\" Value=\"#4f3250\" Type=\"Easing\" Duration=\"0.2\" DurationExp=\"0\" />\n\n\t<Rectangle>\n\t\t<LinearGradient StartPoint=\"0,0\" EndPoint=\"0,1\" AngleDegrees=\"72\">\n\t\t\t<GradientStop ux:Name=\"colorTop\" Offset=\"0\" />\n\t\t\t<GradientStop ux:Name=\"colorBottom\" Offset=\"1\" />\n\t\t</LinearGradient>\n\t</Rectangle>\n\n</App>\n",
+			"file": "/C/Users/chris/AppData/Local/Temp/Rar$DIa1052.42104/MainView.ux",
+			"file_size": 3284,
+			"file_write_time": 131552537420000000,
+			"settings":
+			{
+				"buffer_size": 3284,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 339.0,
+		"last_filter": "key",
+		"selected_items":
+		[
+			[
+				"key",
+				"Preferences: Key Bindings"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 422.0
+	},
+	"console":
+	{
+		"height": 171.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/chris/source/repos/Manna/hikr/Components",
+		"/C/Users/chris/source/repos/Manna/hikr/Modules"
+	],
+	"file_history":
+	[
+		"/C/Users/chris/Documents/Repos/Manna/hikr/Pages/HomePage.js",
+		"/C/Users/chris/Documents/Repos/Manna/hikr/Pages/HomePage.ux",
+		"/C/Users/chris/Documents/Repos/Manna/hikr/MainView.ux",
+		"/C/Users/chris/Documents/Repos/Manna/hikr/Pages/SplashPage.ux",
+		"/C/Users/chris/Documents/Repos/Manna/hikr/Components/hikr.Button.ux",
+		"/C/Users/chris/Documents/Repos/Manna/hikr/Pages/SplashPage.js",
+		"/C/Users/chris/Documents/Repos/Manna/Manna/Components/Manna.Border.ux",
+		"/C/Users/chris/Documents/Repos/Manna/Manna/Pages/SplashPage.js",
+		"/C/Users/chris/Documents/Repos/Manna/Manna/Pages/Manna.Button.ux",
+		"/C/Users/chris/Documents/Repos/Manna/Manna/Pages/Manna.Border.ux",
+		"/C/Users/chris/Documents/Repos/Manna/Manna/Components/hikr.Page.ux",
+		"/C/Users/chris/source/repos/Manna/hikr/Modules/Backend.js",
+		"/C/Users/chris/source/repos/Manna/hikr/Modules/Context.js",
+		"/C/Users/chris/source/repos/Manna/hikr/MainView.ux",
+		"/C/Users/chris/AppData/Roaming/Sublime Text 3/Packages/Fuse/UserGuide.txt"
+	],
+	"find":
+	{
+		"height": 88.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/Users/chris/Documents/Repos/Manna/hikr/Pages/EditHikePage.ux",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1266,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Fuse/UX.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "MainView.ux",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 315,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								288,
+								288
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Fuse/UX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Pages/SplashPage.ux",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 910,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								311,
+								311
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Fuse/UX.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Pages/SplashPage.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 214,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								162,
+								162
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Pages/MenuPage.ux",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1628,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Fuse/UX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Components/Manna.Card.ux",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 613,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								30,
+								30
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Fuse/UX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "Components/Cards.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 356,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "Pages/HomePage.ux",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 72,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								63,
+								63
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Fuse/UX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "Components/Manna.Button.ux",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 722,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								498,
+								498
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Fuse/UX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 9,
+					"file": "/C/Users/chris/AppData/Local/Temp/Rar$DIa6336.35049/Card.ux",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3757,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2669,
+								2669
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Fuse/UX.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 432.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/C/Users/chris/AppData/Local/Temp/Rar$DIa1052.42104/MainView.ux",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3284,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								744,
+								744
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Fuse/UX.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 934.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.488656716418,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.FuseBuildResults":
+	{
+		"height": 136.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Sublime Project.sublime-project",
+	"replace":
+	{
+		"height": 63.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 245.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
