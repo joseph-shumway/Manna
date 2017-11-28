@@ -43,6 +43,27 @@ public partial class MainView: Fuse.App
         }
         static global::Uno.UX.Selector __selector0 = "home";
     }
+    [Uno.Compiler.UxGenerated]
+    public partial class Template2: Uno.UX.Template
+    {
+        [Uno.WeakReference] internal readonly MainView __parent;
+        [Uno.WeakReference] internal readonly MainView __parentInstance;
+        public Template2(MainView parent, MainView parentInstance): base("menu", false)
+        {
+            __parent = parent;
+            __parentInstance = parentInstance;
+        }
+        static Template2()
+        {
+        }
+        public override object New()
+        {
+            var __self = new global::MenuPage(__parent.router);
+            __self.Name = __selector0;
+            return __self;
+        }
+        static global::Uno.UX.Selector __selector0 = "menu";
+    }
     internal global::Fuse.Navigation.Router router;
     static MainView()
     {
@@ -178,18 +199,22 @@ public partial class MainView: Fuse.App
         var temp14 = new global::FuseJS.Bundle();
         var temp15 = new global::FuseJS.FileReaderImpl();
         var temp16 = new global::FuseJS.UserEvents();
-        var temp17 = new global::Fuse.Controls.ClientPanel();
+        var temp17 = new global::Fuse.Android.StatusBarConfig();
         router = new global::Fuse.Navigation.Router();
         var temp18 = new global::Fuse.Controls.Navigator();
         var splash = new Template(this, this);
         var home = new Template1(this, this);
-        temp17.Children.Add(router);
-        temp17.Children.Add(temp18);
+        var menu = new Template2(this, this);
+        temp17.Color = float4(0f, 0f, 0f, 0.2f);
+        temp17.IsVisible = true;
         router.Name = __selector0;
         temp18.DefaultPath = "splash";
         temp18.Templates.Add(splash);
         temp18.Templates.Add(home);
+        temp18.Templates.Add(menu);
         this.Children.Add(temp17);
+        this.Children.Add(router);
+        this.Children.Add(temp18);
     }
     static global::Uno.UX.Selector __selector0 = "router";
 }

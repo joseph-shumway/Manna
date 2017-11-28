@@ -1,12 +1,48 @@
 <DockPanel ux:Class="MenuPage">
-	<Router ux:Dependency="router"/>
+	<Router ux:Dependency="router" />
 
-	<JavaScript File="../Components/Cards.js"/>
+	<JavaScript File="../Components/Cards.js" />
+	<JavaScript File="../Pages/MenuPage.js" />
 
-	<PageControl ux:Name="cards" Padding="24,32,24,8">
-		<Each Items="{cards}">
-			<Manna.Card Item="{item}" Color="Black" Cover="{cover}"/>
-			<Text Value="{cover}" Alignment="Center"/>
-		</Each>
-	</PageControl>
+	<DockPanel>
+
+		<StackPanel Dock="Top" Color="#6b3600">
+
+			<StatusBarBackground />
+			<Panel Height="56">
+				<StackPanel Orientation="Horizontal" Alignment="CenterLeft" Margin="16" ItemSpacing="4" Clicked="{goBack}">
+					<Image File="../Assets/back.png" />
+					<Text Value="Back" Alignment="VerticalCenter" Color="#fff" FontSize="16" />
+				</StackPanel>
+				<Text Value="Menu" Alignment="Center" Color="#fff" FontSize="20" />
+			</Panel>
+		</StackPanel>
+
+		<PageControl ux:Name="cards" Padding="24,32,24,8">
+			
+			<Each Items="{cards}">
+				
+				<Manna.Card Item="{item}" Color="#000000" Cover="{cover}" TopColor="{topColor}" BottomColor="{bottomColor}" Price="{price}">
+					<WhileActive Threshold=".5">
+						<Set topColor.Value="{topColor}" />
+						<Set bottomColor.Value="{bottomColor}" />
+					</WhileActive>
+					<LinearGradient />
+				</Manna.Card>
+
+			</Each>
+
+		</PageControl>
+
+	</DockPanel>
+
+	<Attractor ux:Name="topColor" Target="colorTop.Color" Value="#cdb9b5" Type="Easing" Duration="0.2" DurationExp="0" />
+	<Attractor ux:Name="bottomColor" Target="colorBottom.Color" Value="#4f3250" Type="Easing" Duration="0.2" DurationExp="0" />
+
+	<Rectangle Alignment="Default" Color="#982A2AC3">
+		<LinearGradient StartPoint="0,0" EndPoint="0,1" AngleDegrees="72">
+			<GradientStop ux:Name="colorTop" Offset="0" Color="{ReadProperty}" />
+			<GradientStop ux:Name="colorBottom" Offset="1" Color="{ReadProperty}" />
+		</LinearGradient>
+	</Rectangle>
 </DockPanel>

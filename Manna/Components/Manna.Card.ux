@@ -1,27 +1,71 @@
 <Page ux:Class="Manna.Card">
 
 
-	<JavaScript File="Cards.js"/>
+	<JavaScript File="Cards.js" />
 	<string ux:Property="Item" />
 	<string ux:Property="Description" />
 	<string ux:Property="Cover" />
-
-	<Panel Dock="Top" Height="200">
-
-		<Rectangle ux:Name="image" CornerRadius="1" Color="#abcdef" Alignment="HorizontalCenter" Width="168">
-
-
-
-			<LayoutAnimation>
-				<Move Vector="1"				RelativeTo="PositionChange" DurationBack=".4" Easing="QuarticOut" EasingBack="QuarticIn"/>
-			</LayoutAnimation>
-
-			<ImageFill File="{ReadProperty Cover}" StretchMode="UniformToFill" WrapMode="ClampToEdge"/>
-			<Stroke Width="1" Color="#fff3"/>
-			<Shadow/>
-		</Rectangle>
-	</Panel>
+	<string ux:Property="BottomColor" />
+	<string ux:Property="TopColor" />
+	<string ux:Property="Price" />
+	
+	<Rectangle CornerRadius="15,15,0,0" Alignment="Default" Padding="0, 0, 0, 0" Margin="0, 0, 0, 60" Layer="Background">
+		<LinearGradient StartPoint="0,0" EndPoint="0,1" AngleDegrees="72">
+			<GradientStop Offset="0" Color="{ReadProperty BottomColor}" />
+			<GradientStop Offset="1" Color="{ReadProperty TopColor}" />
+		</LinearGradient>
+	</Rectangle>
+	<DockPanel>
+		<Panel Dock="Top" Height="200" Alignment="HorizontalCenter" Y="90">
 
 
 
+			<Rectangle ux:Name="image" CornerRadius="3" Color="#abcdef" Alignment="HorizontalCenter" Width="168">
+
+
+
+				<LayoutAnimation>
+					<Move Vector="1" RelativeTo="PositionChange" DurationBack=".4" Easing="QuarticOut" EasingBack="QuarticIn" />
+				</LayoutAnimation>
+
+				<ImageFill File="{ReadProperty Cover}" StretchMode="UniformToFill" WrapMode="ClampToEdge" />
+				<Stroke Width="1" Color="#fff3" />
+				<Shadow Angle="76" />
+			</Rectangle>
+		</Panel>
+
+
+
+		
+
+		
+		<Grid Rows="1*,auto">
+			<ScrollView Padding="24,0" Layer="Layout">
+				<StackPanel ItemSpacing="8" Margin="0,24,0,0">
+					<Text Value="{ReadProperty Item}" Color="#000" FontSize="22" TextWrapping="Wrap" TextColor="#5B5B5BB6" TextAlignment="Center" />
+					<Text Value="{ReadProperty Description}" Color="#0008" FontSize="15" TextWrapping="Wrap" TextColor="#827C7C7E" />
+				</StackPanel>
+			</ScrollView>
+
+			<StackPanel Margin="24" ItemSpacing="16" Layer="Layout">
+				<Grid Height="48" Columns="auto,1*,auto" CellSpacing="8">
+					<StackPanel Alignment="VerticalCenter" Orientation="Horizontal">
+						<Panel Width="14">
+							<Rectangle Color="#fff" Width="7" Alignment="Left" />
+						</Panel>
+					</StackPanel>
+				</Grid>
+
+				<Panel Height="48">
+					<Text Value="{ReadProperty Price}" Alignment="Center" FontSize="20" Color="#fff" />
+					<Rectangle Color="#759ae7" CornerRadius="4" Layer="Layout" />
+				</Panel>
+			</StackPanel>
+
+
+		</Grid>
+		<Rectangle Layer="Layout" CornerRadius="0,0,15,15" Color="#F9F9F9FE" Alignment="Default" />
+
+	</DockPanel>
+	
 </Page>

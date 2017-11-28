@@ -6,7 +6,8 @@
   ],
   "Includes": [
     "*",
-	"*.jpg:Bundle"
+	"*.jpg:Bundle",
+	"*.png:Bundle"
   ]
 }
 
