@@ -15,7 +15,7 @@
 
 		<DockPanel ux:Name="DockPanel">
 
-			<Manna.Button Alignment="Center" MinWidth="200" MinHeight="30" Y="150" ButtonColor="#eeeeee" ButtonOpacity=".95" Clicked="{goToMenuPage}"> 
+			<Manna.Button Alignment="Center" MinWidth="200" MinHeight="30" Y="150" ButtonColor="#eeeeee" ButtonOpacity="0.95" Clicked="{goToMenuPage}"> 
 
 				<Text Value="Get Started" Color="#888888" Alignment="Center" FontSize="20" >
 					<Font File="../Assets/Fonts/GotikaCaps.otf" />
@@ -23,7 +23,7 @@
 
 			</Manna.Button>
 
-			<BottomFrameBackground Dock="Bottom" Opacity=".1" />
+			<BottomFrameBackground Dock="Bottom" Opacity="0.1" />
 		</DockPanel>
 	</DockPanel>
 </Page>

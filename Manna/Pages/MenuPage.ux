@@ -1,12 +1,14 @@
-<DockPanel ux:Class="MenuPage">
+<DockPanel ux:Class="MenuPage" Color="#FFFFFF00">
 	<Router ux:Dependency="router" />
+	<string ux:Property="HeaderText" />
+
 
 	<JavaScript File="../Components/Cards.js" />
 	<JavaScript File="../Pages/MenuPage.js" />
 
 	<DockPanel>
 
-		<StackPanel Dock="Top" Color="#6b3600">
+		<StackPanel Dock="Top" Color="#222222aa">
 
 			<StatusBarBackground />
 			<Panel Height="56">
@@ -14,7 +16,13 @@
 					<Image File="../Assets/back.png" />
 					<Text Value="Back" Alignment="VerticalCenter" Color="#fff" FontSize="16" />
 				</StackPanel>
-				<Text Value="Menu" Alignment="Center" Color="#fff" FontSize="20" />
+
+
+
+				<Text Value="Menu" ux:Name="Header" Alignment="Center" Color="#fff" FontSize="20" />
+
+
+
 			</Panel>
 		</StackPanel>
 
@@ -22,12 +30,12 @@
 			
 			<Each Items="{cards}">
 				
-				<Manna.Card Item="{item}" Color="#000000" Cover="{cover}" TopColor="{topColor}" BottomColor="{bottomColor}" Price="{price}">
-					<WhileActive Threshold=".5">
+				<Manna.Card Item="{item}" Cover="{cover}" Price="Price: {price}" Description="{description}" Category="{category}" Color="#FFFFFF00">
+					<!--<WhileActive Threshold=".5">
 						<Set topColor.Value="{topColor}" />
 						<Set bottomColor.Value="{bottomColor}" />
-					</WhileActive>
-					<LinearGradient />
+					</WhileActive>-->
+					
 				</Manna.Card>
 
 			</Each>
@@ -36,13 +44,16 @@
 
 	</DockPanel>
 
-	<Attractor ux:Name="topColor" Target="colorTop.Color" Value="#cdb9b5" Type="Easing" Duration="0.2" DurationExp="0" />
-	<Attractor ux:Name="bottomColor" Target="colorBottom.Color" Value="#4f3250" Type="Easing" Duration="0.2" DurationExp="0" />
+	<!--<Attractor ux:Name="topColor" Target="colorTop.Color" Value="#fff3bd" Type="Easing" Duration="0.2" DurationExp="0" />
+	<Attractor ux:Name="bottomColor" Target="colorBottom.Color" Value="#b86b00" Type="Easing" Duration="0.2" DurationExp="0" />-->
 
-	<Rectangle Alignment="Default" Color="#982A2AC3">
-		<LinearGradient StartPoint="0,0" EndPoint="0,1" AngleDegrees="72">
-			<GradientStop ux:Name="colorTop" Offset="0" Color="{ReadProperty}" />
-			<GradientStop ux:Name="colorBottom" Offset="1" Color="{ReadProperty}" />
-		</LinearGradient>
+	<Rectangle Alignment="Default" Color="#97292901">
+		<ImageFill File="../Assets/WoodBoards.png" StretchMode="UniformToFill"/>
+
+		<!--<LinearGradient StartPoint="0,0" EndPoint="0,1" AngleDegrees="72">
+			<GradientStop ux:Name="colorTop" Offset="0" Color="#fff3bd" />
+			<GradientStop ux:Name="colorBottom" Offset="1" Color="#b86b00" />
+		</LinearGradient>-->
 	</Rectangle>
+	
 </DockPanel>

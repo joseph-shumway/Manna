@@ -108,34 +108,14 @@ sealed class Manna_accessor_Manna_Card_Description: global::Uno.UX.PropertyAcces
     public override void SetAsObject(global::Uno.UX.PropertyObject obj, object v, global::Uno.UX.IPropertyListener origin) { ((Manna.Card)obj).SetDescription((string)v, origin); }
     public override bool SupportsOriginSetter { get { return true; } }
 }
-sealed class Manna_accessor_Manna_Card_ArtistPic: global::Uno.UX.PropertyAccessor
+sealed class Manna_accessor_Manna_Card_Price: global::Uno.UX.PropertyAccessor
 {
-    public static global::Uno.UX.PropertyAccessor Singleton = new Manna_accessor_Manna_Card_ArtistPic();
+    public static global::Uno.UX.PropertyAccessor Singleton = new Manna_accessor_Manna_Card_Price();
     public override global::Uno.UX.Selector Name { get { return _name; } }
-    static global::Uno.UX.Selector _name = "ArtistPic";
+    static global::Uno.UX.Selector _name = "Price";
     public override global::Uno.Type PropertyType { get { return typeof(string); } }
-    public override object GetAsObject(global::Uno.UX.PropertyObject obj) { return ((Manna.Card)obj).ArtistPic; }
-    public override void SetAsObject(global::Uno.UX.PropertyObject obj, object v, global::Uno.UX.IPropertyListener origin) { ((Manna.Card)obj).SetArtistPic((string)v, origin); }
-    public override bool SupportsOriginSetter { get { return true; } }
-}
-sealed class Manna_accessor_Manna_Card_Artist: global::Uno.UX.PropertyAccessor
-{
-    public static global::Uno.UX.PropertyAccessor Singleton = new Manna_accessor_Manna_Card_Artist();
-    public override global::Uno.UX.Selector Name { get { return _name; } }
-    static global::Uno.UX.Selector _name = "Artist";
-    public override global::Uno.Type PropertyType { get { return typeof(string); } }
-    public override object GetAsObject(global::Uno.UX.PropertyObject obj) { return ((Manna.Card)obj).Artist; }
-    public override void SetAsObject(global::Uno.UX.PropertyObject obj, object v, global::Uno.UX.IPropertyListener origin) { ((Manna.Card)obj).SetArtist((string)v, origin); }
-    public override bool SupportsOriginSetter { get { return true; } }
-}
-sealed class Manna_accessor_Manna_Card_Albums: global::Uno.UX.PropertyAccessor
-{
-    public static global::Uno.UX.PropertyAccessor Singleton = new Manna_accessor_Manna_Card_Albums();
-    public override global::Uno.UX.Selector Name { get { return _name; } }
-    static global::Uno.UX.Selector _name = "Albums";
-    public override global::Uno.Type PropertyType { get { return typeof(string); } }
-    public override object GetAsObject(global::Uno.UX.PropertyObject obj) { return ((Manna.Card)obj).Albums; }
-    public override void SetAsObject(global::Uno.UX.PropertyObject obj, object v, global::Uno.UX.IPropertyListener origin) { ((Manna.Card)obj).SetAlbums((string)v, origin); }
+    public override object GetAsObject(global::Uno.UX.PropertyObject obj) { return ((Manna.Card)obj).Price; }
+    public override void SetAsObject(global::Uno.UX.PropertyObject obj, object v, global::Uno.UX.IPropertyListener origin) { ((Manna.Card)obj).SetPrice((string)v, origin); }
     public override bool SupportsOriginSetter { get { return true; } }
 }
 sealed class Manna_FuseControlsShape_Color_Property: Uno.UX.Property<float4>
@@ -241,6 +221,15 @@ sealed class Manna_MannaCard_BottomColor_Property: Uno.UX.Property<string>
     public override void Set(global::Uno.UX.PropertyObject obj, string v, global::Uno.UX.IPropertyListener origin) { ((Manna.Card)obj).SetBottomColor(v, origin); }
     public override bool SupportsOriginSetter { get { return true; } }
 }
+sealed class Manna_MannaCard_Price_Property: Uno.UX.Property<string>
+{
+    [Uno.WeakReference] readonly Manna.Card _obj;
+    public Manna_MannaCard_Price_Property(Manna.Card obj, global::Uno.UX.Selector name) : base(name) { _obj = obj; }
+    public override global::Uno.UX.PropertyObject Object { get { return _obj; } }
+    public override string Get(global::Uno.UX.PropertyObject obj) { return ((Manna.Card)obj).Price; }
+    public override void Set(global::Uno.UX.PropertyObject obj, string v, global::Uno.UX.IPropertyListener origin) { ((Manna.Card)obj).SetPrice(v, origin); }
+    public override bool SupportsOriginSetter { get { return true; } }
+}
 sealed class Manna_MannaCard_Description_Property: Uno.UX.Property<string>
 {
     [Uno.WeakReference] readonly Manna.Card _obj;
@@ -250,30 +239,28 @@ sealed class Manna_MannaCard_Description_Property: Uno.UX.Property<string>
     public override void Set(global::Uno.UX.PropertyObject obj, string v, global::Uno.UX.IPropertyListener origin) { ((Manna.Card)obj).SetDescription(v, origin); }
     public override bool SupportsOriginSetter { get { return true; } }
 }
-sealed class Manna_MannaCard_Albums_Property: Uno.UX.Property<string>
+sealed class Manna_FuseAnimationsAttractorfloat4_Value_Property: Uno.UX.Property<float4>
 {
-    [Uno.WeakReference] readonly Manna.Card _obj;
-    public Manna_MannaCard_Albums_Property(Manna.Card obj, global::Uno.UX.Selector name) : base(name) { _obj = obj; }
+    [Uno.WeakReference] readonly Fuse.Animations.Attractor<float4> _obj;
+    public Manna_FuseAnimationsAttractorfloat4_Value_Property(Fuse.Animations.Attractor<float4> obj, global::Uno.UX.Selector name) : base(name) { _obj = obj; }
     public override global::Uno.UX.PropertyObject Object { get { return _obj; } }
-    public override string Get(global::Uno.UX.PropertyObject obj) { return ((Manna.Card)obj).Albums; }
-    public override void Set(global::Uno.UX.PropertyObject obj, string v, global::Uno.UX.IPropertyListener origin) { ((Manna.Card)obj).SetAlbums(v, origin); }
-    public override bool SupportsOriginSetter { get { return true; } }
+    public override float4 Get(global::Uno.UX.PropertyObject obj) { return ((Fuse.Animations.Attractor<float4>)obj).Value; }
+    public override void Set(global::Uno.UX.PropertyObject obj, float4 v, global::Uno.UX.IPropertyListener origin) { ((Fuse.Animations.Attractor<float4>)obj).Value = v; }
 }
-sealed class Manna_MannaCard_Artist_Property: Uno.UX.Property<string>
+sealed class Manna_FuseTriggersActionsSetfloat4_Value_Property: Uno.UX.Property<float4>
 {
-    [Uno.WeakReference] readonly Manna.Card _obj;
-    public Manna_MannaCard_Artist_Property(Manna.Card obj, global::Uno.UX.Selector name) : base(name) { _obj = obj; }
+    [Uno.WeakReference] readonly Fuse.Triggers.Actions.Set<float4> _obj;
+    public Manna_FuseTriggersActionsSetfloat4_Value_Property(Fuse.Triggers.Actions.Set<float4> obj, global::Uno.UX.Selector name) : base(name) { _obj = obj; }
     public override global::Uno.UX.PropertyObject Object { get { return _obj; } }
-    public override string Get(global::Uno.UX.PropertyObject obj) { return ((Manna.Card)obj).Artist; }
-    public override void Set(global::Uno.UX.PropertyObject obj, string v, global::Uno.UX.IPropertyListener origin) { ((Manna.Card)obj).SetArtist(v, origin); }
-    public override bool SupportsOriginSetter { get { return true; } }
+    public override float4 Get(global::Uno.UX.PropertyObject obj) { return ((Fuse.Triggers.Actions.Set<float4>)obj).Value; }
+    public override void Set(global::Uno.UX.PropertyObject obj, float4 v, global::Uno.UX.IPropertyListener origin) { ((Fuse.Triggers.Actions.Set<float4>)obj).Value = v; }
 }
-sealed class Manna_MannaCard_ArtistPic_Property: Uno.UX.Property<string>
+sealed class Manna_MenuPage_HeaderText_Property: Uno.UX.Property<string>
 {
-    [Uno.WeakReference] readonly Manna.Card _obj;
-    public Manna_MannaCard_ArtistPic_Property(Manna.Card obj, global::Uno.UX.Selector name) : base(name) { _obj = obj; }
+    [Uno.WeakReference] readonly MenuPage _obj;
+    public Manna_MenuPage_HeaderText_Property(MenuPage obj, global::Uno.UX.Selector name) : base(name) { _obj = obj; }
     public override global::Uno.UX.PropertyObject Object { get { return _obj; } }
-    public override string Get(global::Uno.UX.PropertyObject obj) { return ((Manna.Card)obj).ArtistPic; }
-    public override void Set(global::Uno.UX.PropertyObject obj, string v, global::Uno.UX.IPropertyListener origin) { ((Manna.Card)obj).SetArtistPic(v, origin); }
+    public override string Get(global::Uno.UX.PropertyObject obj) { return ((MenuPage)obj).HeaderText; }
+    public override void Set(global::Uno.UX.PropertyObject obj, string v, global::Uno.UX.IPropertyListener origin) { ((MenuPage)obj).SetHeaderText(v, origin); }
     public override bool SupportsOriginSetter { get { return true; } }
 }

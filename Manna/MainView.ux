@@ -2,7 +2,7 @@
 	<Android.StatusBarConfig Color="#0003" IsVisible="True" />
 
 		<Router ux:Name="router" />
-
+		
 		<Navigator DefaultPath="splash">
 			<SplashPage ux:Template="splash" router="router"/>
 			<HomePage ux:Template="home" router="router" />

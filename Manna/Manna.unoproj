@@ -1,5 +1,9 @@
 {
   "RootNamespace":"",
+  "Title":" Notes",
+  "Mobile": {
+    "Orientations": "Portrait"
+  },
   "Packages": [
     "Fuse",
     "FuseJS"
@@ -8,6 +12,16 @@
     "*",
 	"*.jpg:Bundle",
 	"*.png:Bundle"
-  ]
+  ],
+  "Android": {
+    "Icons": {
+      "LDPI": "Assets/Icons/Android/mipmap-ldpi/icon.png",
+      "MDPI": "Assets/Icons/Android/mipmap-mdpi/icon.png",
+      "HDPI": "Assets/Icons/Android/mipmap-hdpi/icon.png",
+      "XHDPI": "Assets/Icons/Android/mipmap-xhdpi/icon.png",
+      "XXHDPI": "Assets/Icons/Android/mipmap-xxhdpi/icon.png",
+      "XXXHDPI": "Assets/Icons/Android/mipmap-xxxhdpi/icon.png"
+     },
+  }
 }
 

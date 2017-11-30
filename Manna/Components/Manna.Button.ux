@@ -2,8 +2,8 @@
 
 	<string ux:Property="Text" />
 	<float ux:Property="FontSize" />
-	<string ux:Property="ButtonColor" />
-	<string ux:Property="TextColor"/>
+	<float4 ux:Property="ButtonColor" />
+	<float4 ux:Property="TextColor"/>
 	<float ux:Property="ButtonOpacity"/>
 	<float ux:Property="TextOpacity"/>
 

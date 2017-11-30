@@ -5,45 +5,60 @@
 	<string ux:Property="Item" />
 	<string ux:Property="Description" />
 	<string ux:Property="Cover" />
-	<string ux:Property="BottomColor" />
-	<string ux:Property="TopColor" />
+	<float4 ux:Property="BottomColor" />
+	<float4 ux:Property="TopColor" />
 	<string ux:Property="Price" />
+	<string ux:Property="Category"/>
 	
-	<Rectangle CornerRadius="15,15,0,0" Alignment="Default" Padding="0, 0, 0, 0" Margin="0, 0, 0, 60" Layer="Background">
+	<Rectangle ux:Name="LargePanel" CornerRadius="15,15,0,0" Alignment="Default" Padding="0, 0, 0, 0" Margin="0, 0, 0, 60" Layer="Background" MaxWidth="500">
+		<Rectangle ux:Name="image" Layer="Layout" CornerRadius="3" Color="#abcdef" Alignment="Top" Width="168" Height="168" Padding="0, 0, 0, 0" Margin="20, 20, 20, 20">
+			<Clicked>
+				<!--<Toggle Target="ImageClicked" />-->
+			</Clicked>
+
+			<WhileTrue ux:Name="ImageClicked">
+				<DebugAction Message="Bonk" />
+				<Scale Target="image" Factor="2" Duration=".5" />
+			</WhileTrue>
+
+			<LayoutAnimation>
+				<Move Vector="1" RelativeTo="PositionChange" Duration=".5" DurationBack=".4" Easing="QuarticOut" EasingBack="QuarticIn" />
+			</LayoutAnimation>
+
+			<ImageFill File="{ReadProperty Cover}" StretchMode="UniformToFill" WrapMode="ClampToEdge" />
+			<Stroke Width="1" Color="#fff3" />
+			<DropShadow Distance="5" Angle="72" Size="8" />
+		</Rectangle>
 		<LinearGradient StartPoint="0,0" EndPoint="0,1" AngleDegrees="72">
-			<GradientStop Offset="0" Color="{ReadProperty BottomColor}" />
-			<GradientStop Offset="1" Color="{ReadProperty TopColor}" />
+			<GradientStop Offset="0" Color="#F8F8F8" />
+			<GradientStop Offset="1" Color="#F8F8F8" />
 		</LinearGradient>
+		<DropShadow Distance="12" Angle="72" Size="10" />
 	</Rectangle>
 	<DockPanel>
-		<Panel Dock="Top" Height="200" Alignment="HorizontalCenter" Y="90">
-
-
-
-			<Rectangle ux:Name="image" CornerRadius="3" Color="#abcdef" Alignment="HorizontalCenter" Width="168">
-
-
-
-				<LayoutAnimation>
-					<Move Vector="1" RelativeTo="PositionChange" DurationBack=".4" Easing="QuarticOut" EasingBack="QuarticIn" />
-				</LayoutAnimation>
-
-				<ImageFill File="{ReadProperty Cover}" StretchMode="UniformToFill" WrapMode="ClampToEdge" />
-				<Stroke Width="1" Color="#fff3" />
-				<Shadow Angle="76" />
-			</Rectangle>
-		</Panel>
+		<Panel Dock="Top" Height="200" Alignment="HorizontalCenter" Y="90" />
 
 
 
 		
 
 		
-		<Grid Rows="1*,auto">
-			<ScrollView Padding="24,0" Layer="Layout">
+		<Grid Rows="1*,auto" MaxWidth="500">
+			<ScrollView Padding="24,0" Layer="Layout" MaxWidth="500">
 				<StackPanel ItemSpacing="8" Margin="0,24,0,0">
-					<Text Value="{ReadProperty Item}" Color="#000" FontSize="22" TextWrapping="Wrap" TextColor="#5B5B5BB6" TextAlignment="Center" />
-					<Text Value="{ReadProperty Description}" Color="#0008" FontSize="15" TextWrapping="Wrap" TextColor="#827C7C7E" />
+					
+
+					<Text Value="{ReadProperty Item}" Color="#555555" Y="-10" FontSize="25" TextWrapping="Wrap" TextAlignment="Center">
+						<Font File="../Assets/Fonts/Helvetica.ttf" />
+					</Text>
+
+					<Text Value="{ReadProperty Category}" Color="#aaaaaa" FontSize="17" Y="-15" TextWrapping="Wrap" TextAlignment="Center">
+						<Font File="../Assets/Fonts/Helvetica.ttf" />
+					</Text>
+
+					<Text Value="{ReadProperty Description}" Color="#0008" FontSize="20" TextWrapping="Wrap" TextColor="#827C7C7E" />
+
+
 				</StackPanel>
 			</ScrollView>
 
@@ -58,13 +73,13 @@
 
 				<Panel Height="48">
 					<Text Value="{ReadProperty Price}" Alignment="Center" FontSize="20" Color="#fff" />
-					<Rectangle Color="#759ae7" CornerRadius="4" Layer="Layout" />
+					<Rectangle Color="#333333" CornerRadius="4" Layer="Layout" />
 				</Panel>
 			</StackPanel>
 
 
 		</Grid>
-		<Rectangle Layer="Layout" CornerRadius="0,0,15,15" Color="#F9F9F9FE" Alignment="Default" />
+		<Rectangle Layer="Layout" CornerRadius="0,0,15,15" Color="#F8F8F8FE" Alignment="Default" MaxWidth="500" />
 
 	</DockPanel>
 	
