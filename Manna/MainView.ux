@@ -1,15 +1,19 @@
 <App>
 	<Android.StatusBarConfig Color="#0003" IsVisible="True" />
 
-		<Router ux:Name="router" />
-		
-		<Navigator DefaultPath="splash">
-			<SplashPage ux:Template="splash" router="router"/>
-			<HomePage ux:Template="home" router="router" />
-			<MenuPage ux:Template="menu" router="router" />
+	<Font File="Assets/Fonts/Helvetica.ttf" ux:Global="Helvetica"/>
+	<Font File="Assets/Fonts/Stya.ttf" ux:Global="Stya"/>
+	<Font File="Assets/Fonts/GotikaCaps.otf" ux:Global="Gotika"/>
 
+	<Router ux:Name="router" />
 
-		</Navigator>
+	<Navigator DefaultPath="splash">
+		<SplashPage ux:Template="splash" router="router"/>
+		<HomePage ux:Template="home" router="router" />
+		<MenuPage ux:Template="menu" router="router" />
+		<ContactUsPage ux:Template="contact" router="router" />
+
+	</Navigator>
 
 
 </App>

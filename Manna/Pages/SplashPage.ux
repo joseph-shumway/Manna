@@ -6,20 +6,17 @@
 	<DockPanel ClipToBounds="true" Background="#ffb84d">
 
 		
-		<Text FontSize="75" TextColor="#ffffff" Value="Manna" Alignment="Center" Padding="0,200,0,0">
-			<Font File="../Assets/Fonts/Stya.ttf" />
+		<Text ux:Name="mannaLogo" FontSize="75" TextColor="#ffffff" Value="Manna" Alignment="Center" Padding="0,200,0,0" Font="Stya" > 
 		</Text>
 
-		<Video ux:Name="_video" Layer="Background" Opacity=".7" File="../Assets/Montage.mp4" AutoPlay="true" IsLooping="true" StretchMode="UniformToFill">
+		<Video ux:Name="_video" Layer="Background" Opacity=".7" File="../Assets/Montage30_720p.mp4" AutoPlay="true" IsLooping="true" StretchMode="UniformToFill">
 		</Video>
 
 		<DockPanel ux:Name="DockPanel">
 
 			<Manna.Button Alignment="Center" MinWidth="200" MinHeight="30" Y="150" ButtonColor="#eeeeee" ButtonOpacity="0.95" Clicked="{goToMenuPage}"> 
 
-				<Text Value="Get Started" Color="#888888" Alignment="Center" FontSize="20" >
-					<Font File="../Assets/Fonts/GotikaCaps.otf" />
-				</Text>
+				<Text Value="Get Started" Color="#888888" Alignment="Center" FontSize="20" Font="Gotika"/>
 
 			</Manna.Button>
 

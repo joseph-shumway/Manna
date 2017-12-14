@@ -64,6 +64,30 @@ public partial class MainView: Fuse.App
         }
         static global::Uno.UX.Selector __selector0 = "menu";
     }
+    [Uno.Compiler.UxGenerated]
+    public partial class Template3: Uno.UX.Template
+    {
+        [Uno.WeakReference] internal readonly MainView __parent;
+        [Uno.WeakReference] internal readonly MainView __parentInstance;
+        public Template3(MainView parent, MainView parentInstance): base("contact", false)
+        {
+            __parent = parent;
+            __parentInstance = parentInstance;
+        }
+        static Template3()
+        {
+        }
+        public override object New()
+        {
+            var __self = new global::ContactUsPage(__parent.router);
+            __self.Name = __selector0;
+            return __self;
+        }
+        static global::Uno.UX.Selector __selector0 = "contact";
+    }
+    [global::Uno.UX.UXGlobalResource("Helvetica")] public static readonly Fuse.Font Helvetica;
+    [global::Uno.UX.UXGlobalResource("Stya")] public static readonly Fuse.Font Stya;
+    [global::Uno.UX.UXGlobalResource("Gotika")] public static readonly Fuse.Font Gotika;
     internal global::Fuse.Navigation.Router router;
     static MainView()
     {
@@ -174,6 +198,15 @@ public partial class MainView: Fuse.App
         global::Uno.UX.Resource.SetGlobalKey(global::Fuse.TranslationModes.ParentSize, "ParentSize");
         global::Uno.UX.Resource.SetGlobalKey(global::Fuse.TranslationModes.Width, "Width");
         global::Uno.UX.Resource.SetGlobalKey(global::Fuse.TranslationModes.Height, "Height");
+        global::Uno.UX.Resource.SetGlobalKey(global::MainView.Helvetica, "Helvetica");
+        global::Uno.UX.Resource.SetGlobalKey(global::MainView.Stya, "Stya");
+        global::Uno.UX.Resource.SetGlobalKey(global::MainView.Gotika, "Gotika");
+        Helvetica = new global::Fuse.Font(new global::Uno.UX.BundleFileSource(import("../../../Assets/Fonts/Helvetica.ttf")));
+        Stya = new global::Fuse.Font(new global::Uno.UX.BundleFileSource(import("../../../Assets/Fonts/Stya.ttf")));
+        Gotika = new global::Fuse.Font(new global::Uno.UX.BundleFileSource(import("../../../Assets/Fonts/GotikaCaps.otf")));
+        global::Uno.UX.Resource.SetGlobalKey(Helvetica, "Helvetica");
+        global::Uno.UX.Resource.SetGlobalKey(Stya, "Stya");
+        global::Uno.UX.Resource.SetGlobalKey(Gotika, "Gotika");
     }
     [global::Uno.UX.UXConstructor]
     public MainView()
@@ -205,6 +238,7 @@ public partial class MainView: Fuse.App
         var splash = new Template(this, this);
         var home = new Template1(this, this);
         var menu = new Template2(this, this);
+        var contact = new Template3(this, this);
         temp17.Color = float4(0f, 0f, 0f, 0.2f);
         temp17.IsVisible = true;
         router.Name = __selector0;
@@ -212,6 +246,7 @@ public partial class MainView: Fuse.App
         temp18.Templates.Add(splash);
         temp18.Templates.Add(home);
         temp18.Templates.Add(menu);
+        temp18.Templates.Add(contact);
         this.Children.Add(temp17);
         this.Children.Add(router);
         this.Children.Add(temp18);

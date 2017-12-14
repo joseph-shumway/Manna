@@ -33,14 +33,14 @@ namespace Manna
                 OnPropertyChanged("FontSize", origin);
             }
         }
-        string _field_ButtonColor;
+        float4 _field_ButtonColor;
         [global::Uno.UX.UXOriginSetter("SetButtonColor")]
-        public string ButtonColor
+        public float4 ButtonColor
         {
             get { return _field_ButtonColor; }
             set { SetButtonColor(value, null); }
         }
-        public void SetButtonColor(string value, global::Uno.UX.IPropertyListener origin)
+        public void SetButtonColor(float4 value, global::Uno.UX.IPropertyListener origin)
         {
             if (value != _field_ButtonColor)
             {
@@ -48,14 +48,14 @@ namespace Manna
                 OnPropertyChanged("ButtonColor", origin);
             }
         }
-        string _field_TextColor;
+        float4 _field_TextColor;
         [global::Uno.UX.UXOriginSetter("SetTextColor")]
-        public string TextColor
+        public float4 TextColor
         {
             get { return _field_TextColor; }
             set { SetTextColor(value, null); }
         }
-        public void SetTextColor(string value, global::Uno.UX.IPropertyListener origin)
+        public void SetTextColor(float4 value, global::Uno.UX.IPropertyListener origin)
         {
             if (value != _field_TextColor)
             {
@@ -142,6 +142,7 @@ namespace Manna
             this.FontSize = 16f;
             this.ButtonOpacity = 1f;
             temp.CornerRadius = float4(50f, 50f, 50f, 50f);
+            temp.MaxWidth = new Uno.UX.Size(170f, Uno.UX.Unit.Unspecified);
             temp.Layer = Fuse.Layer.Background;
             temp.Bindings.Add(temp14);
             temp.Bindings.Add(temp15);

@@ -1,6 +1,6 @@
 {
   "RootNamespace":"",
-  "Title":" Notes",
+  "Title":" Manna",
   "Mobile": {
     "Orientations": "Portrait"
   },
@@ -14,6 +14,8 @@
 	"*.png:Bundle"
   ],
   "Android": {
+  "VersionName": "New Beginnings",
+  "VersionCode": "1",
     "Icons": {
       "LDPI": "Assets/Icons/Android/mipmap-ldpi/icon.png",
       "MDPI": "Assets/Icons/Android/mipmap-mdpi/icon.png",
@@ -22,6 +24,12 @@
       "XXHDPI": "Assets/Icons/Android/mipmap-xxhdpi/icon.png",
       "XXXHDPI": "Assets/Icons/Android/mipmap-xxxhdpi/icon.png"
      },
+	 "Key": {
+			"Alias": "application",
+			"AliasPassword": "RedSea",
+			"Store": "release.keystore",
+			"StorePassword": "RedSea"
+		}
   }
 }
 

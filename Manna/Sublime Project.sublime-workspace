@@ -4,8 +4,24 @@
 		"selected_items":
 		[
 			[
+				"u",
+				"UniformToFill\t"
+			],
+			[
+				"Sc",
+				"StretchMode\t"
+			],
+			[
+				"Image",
+				"ImageFill\t"
+			],
+			[
 				"Dur",
-				"DurationBack\t"
+				"Duration\t"
+			],
+			[
+				"S",
+				"Size\t"
 			],
 			[
 				"Lay",
@@ -44,10 +60,6 @@
 				"MaxWidth\t"
 			],
 			[
-				"S",
-				"Spread\t"
-			],
-			[
 				"Col",
 				"TextColor\t"
 			],
@@ -79,46 +91,26 @@
 			"file": "MainView.ux",
 			"settings":
 			{
-				"buffer_size": 315,
+				"buffer_size": 317,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "Pages/SplashPage.ux",
-			"settings":
-			{
-				"buffer_size": 910,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Pages/SplashPage.js",
-			"settings":
-			{
-				"buffer_size": 214,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "Pages/MenuPage.ux",
 			"settings":
 			{
-				"buffer_size": 1628,
+				"buffer_size": 1886,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"contents": "<Page ux:Class=\"Manna.Card\">\n\n\n\t<string ux:Property=\"Item\" />\n\t<string ux:Property=\"Description\" />\n\t<string ux:Property=\"Cover\" />\n\n\t<Panel Dock=\"Top\" Height=\"200\">\n\n\t\t<Rectangle ux:Name=\"image\" CornerRadius=\"1\" Color=\"#abcdef\" Alignment=\"HorizontalCenter\" Width=\"168\">\n\n\n\n\t\t\t<LayoutAnimation>\n\t\t\t\t<Move Vector=\"1\"\t\t\t\tRelativeTo=\"PositionChange\" DurationBack=\".4\" Easing=\"QuarticOut\" EasingBack=\"QuarticIn\"/>\n\t\t\t</LayoutAnimation>\n\n\t\t\t<ImageFill File=\"{ReadProperty Cover}\" StretchMode=\"UniformToFill\" WrapMode=\"ClampToEdge\"/>\n\t\t\t<Stroke Width=\"1\" Color=\"#fff3\"/>\n\t\t\t<Shadow/>\n\t\t</Rectangle>\n\t</Panel>\n\n\n\n</Page>",
 			"file": "Components/Manna.Card.ux",
-			"file_size": 2320,
-			"file_write_time": 131563516363971639,
 			"settings":
 			{
-				"buffer_size": 613,
+				"buffer_size": 2928,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
@@ -126,25 +118,7 @@
 			"file": "Components/Cards.js",
 			"settings":
 			{
-				"buffer_size": 356,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Pages/HomePage.ux",
-			"settings":
-			{
-				"buffer_size": 72,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Components/Manna.Button.ux",
-			"settings":
-			{
-				"buffer_size": 722,
+				"buffer_size": 3787,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -157,6 +131,7 @@
 			"settings":
 			{
 				"buffer_size": 3757,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
@@ -168,6 +143,7 @@
 			"settings":
 			{
 				"buffer_size": 3284,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		}
@@ -218,6 +194,10 @@
 	],
 	"file_history":
 	[
+		"/C/Users/chris/Documents/Repos/Manna/Manna/Pages/SplashPage.ux",
+		"/C/Users/chris/Documents/Repos/Manna/Manna/Pages/SplashPage.js",
+		"/C/Users/chris/Documents/Repos/Manna/Manna/Pages/HomePage.ux",
+		"/C/Users/chris/Documents/Repos/Manna/Manna/Components/Manna.Button.ux",
 		"/C/Users/chris/Documents/Repos/Manna/hikr/Pages/HomePage.js",
 		"/C/Users/chris/Documents/Repos/Manna/hikr/Pages/HomePage.ux",
 		"/C/Users/chris/Documents/Repos/Manna/hikr/MainView.ux",
@@ -225,7 +205,6 @@
 		"/C/Users/chris/Documents/Repos/Manna/hikr/Components/hikr.Button.ux",
 		"/C/Users/chris/Documents/Repos/Manna/hikr/Pages/SplashPage.js",
 		"/C/Users/chris/Documents/Repos/Manna/Manna/Components/Manna.Border.ux",
-		"/C/Users/chris/Documents/Repos/Manna/Manna/Pages/SplashPage.js",
 		"/C/Users/chris/Documents/Repos/Manna/Manna/Pages/Manna.Button.ux",
 		"/C/Users/chris/Documents/Repos/Manna/Manna/Pages/Manna.Border.ux",
 		"/C/Users/chris/Documents/Repos/Manna/Manna/Components/hikr.Page.ux",
@@ -250,6 +229,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"dropshadow",
+			"shadow"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -267,7 +248,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -296,7 +277,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 5,
 					"type": "text"
 				},
 				{
@@ -305,15 +286,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 315,
+						"buffer_size": 317,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								288,
-								288
+								99,
+								99
 							]
 						],
 						"settings":
@@ -324,81 +305,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 2,
-					"file": "Pages/SplashPage.ux",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 910,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								311,
-								311
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Fuse/UX.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "Pages/SplashPage.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 214,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								162,
-								162
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
 					"file": "Pages/MenuPage.ux",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1628,
+						"buffer_size": 1886,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1886,
+								1886
 							]
 						],
 						"settings":
@@ -406,55 +330,55 @@
 							"syntax": "Packages/Fuse/UX.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "Components/Manna.Card.ux",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 613,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								30,
-								30
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Fuse/UX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 459.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "Components/Cards.js",
+					"buffer": 3,
+					"file": "Components/Manna.Card.ux",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 356,
+						"buffer_size": 2928,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1181,
+								1181
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Fuse/UX.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 187.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Components/Cards.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3787,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3706,
+								3706
 							]
 						],
 						"settings":
@@ -462,76 +386,14 @@
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "Pages/HomePage.ux",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 72,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								63,
-								63
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Fuse/UX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2205.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "Components/Manna.Button.ux",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 722,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								498,
-								498
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Fuse/UX.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 10,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
-				{
-					"buffer": 9,
+					"buffer": 5,
 					"file": "/C/Users/chris/AppData/Local/Temp/Rar$DIa6336.35049/Card.ux",
 					"semi_transient": false,
 					"settings":
@@ -543,8 +405,8 @@
 						"selection":
 						[
 							[
-								2669,
-								2669
+								3617,
+								3623
 							]
 						],
 						"settings":
@@ -553,14 +415,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 432.0,
+						"translation.y": 1458.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 6,
 					"file": "/C/Users/chris/AppData/Local/Temp/Rar$DIa1052.42104/MainView.ux",
 					"semi_transient": false,
 					"settings":
@@ -572,8 +434,8 @@
 						"selection":
 						[
 							[
-								744,
-								744
+								444,
+								446
 							]
 						],
 						"settings":
@@ -582,10 +444,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 934.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
@@ -593,7 +455,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 34.0
+		"height": 30.0
 	},
 	"input":
 	{
@@ -608,18 +470,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.488656716418,
 			1.0
 		],
 		"rows":
@@ -641,7 +496,7 @@
 	"project": "Sublime Project.sublime-project",
 	"replace":
 	{
-		"height": 63.0
+		"height": 55.0
 	},
 	"save_all_on_build": true,
 	"select_file":

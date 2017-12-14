@@ -1,59 +1,130 @@
 <DockPanel ux:Class="MenuPage" Color="#FFFFFF00">
+
+
+
 	<Router ux:Dependency="router" />
 	<string ux:Property="HeaderText" />
 
+	<EdgeNavigator HitTestMode="LocalBoundsAndChildren">
 
-	<JavaScript File="../Components/Cards.js" />
-	<JavaScript File="../Pages/MenuPage.js" />
+		
 
-	<DockPanel>
+		<StackPanel ux:Name="SideMenu" Width="200" EdgeNavigation.Edge="Left" Background="#392a1f" Padding="20"> 
 
-		<StackPanel Dock="Top" Color="#222222aa">
+			<Rectangle Layer="Background" Color="#6D4D36" Alignment="Default" Padding="0, 0, 0, 0" MaxHeight="55" LayoutRole="Standard">
+				<Stroke Color="#60442f" Width="2" />
+			</Rectangle>
+			<ActivatingAnimation>
+				<Change mainAppTranslation.X="200" />
 
-			<StatusBarBackground />
-			<Panel Height="56">
-				<StackPanel Orientation="Horizontal" Alignment="CenterLeft" Margin="16" ItemSpacing="4" Clicked="{goBack}">
-					<Image File="../Assets/back.png" />
-					<Text Value="Back" Alignment="VerticalCenter" Color="#fff" FontSize="16" />
+				<Change topMenuTranslation.Y="0" />
+				<Change bottomMenuTranslation.Y="0" />
+				<Change middleRectangle.Opacity="0" Easing="CircularOut" />
+				<Change topMenuRotation.Degrees="45" Easing="ExponentialIn" />
+				<Change bottomMenuRotation.Degrees="-45" Easing="ExponentialIn" />
+				<Change topRectangle.Width="28" />
+				<Change bottomRectangle.Width="28" />
+				<Change topRectangle.Color="#aaa" Easing="ExponentialIn"/>
+			</ActivatingAnimation>
+
+			<WhileActive>
+				<Callback Handler="{setSidebarOpen}" />
+			</WhileActive>
+			<WhileInactive>
+				<Callback Handler="{setSidebarClosed}" />
+			</WhileInactive>
+
+			<Rectangle Color="#fff" />
+
+			<Manna.Button MinWidth="200" MinHeight="30" MaxHeight="50" MaxWidth="40" ButtonColor="#eeeeee" ButtonOpacity="0.95" Margin="0" Clicked="{goToContactUsPage}">
+				<Text Value="Contact Us" TextColor="#111111" Alignment="Center" Padding="0, 0, 0, 0" Font="Helvetica" />
+			</Manna.Button>
+		</StackPanel>
+		
+
+
+		<JavaScript File="../Components/Cards.js" />
+		<JavaScript File="../Pages/MenuPage.js" />
+
+		<Page ux:Name="content">
+			<DockPanel >
+
+				<Translation ux:Name="mainAppTranslation" />
+				<StackPanel Dock="Top" Color="#392a1f">
+
+					<StatusBarBackground />
+
+
+
+
+
+
+
+					<Panel Height="56">
+						<StackPanel Orientation="Horizontal" Alignment="CenterLeft" Margin="16" ItemSpacing="4" >
+							<Panel Margin="7,5,5,5" Height="32" Width="32" HitTestMode="LocalBounds">
+								<WhileTrue Value="{sidebarOpen}">
+									<Clicked>
+										<NavigateTo Target="content"/>
+									</Clicked>
+								</WhileTrue>
+								<WhileFalse Value="{sidebarOpen}">
+									<Clicked>
+										<NavigateTo Target="SideMenu" />
+
+									</Clicked>
+								</WhileFalse>
+								<Rectangle ux:Name="topRectangle" Height="2" Width="26" Color="#eee">
+									<Translation Y="-9" ux:Name="topMenuTranslation" />
+									<Rotation ux:Name="topMenuRotation" />
+								</Rectangle>
+								<Rectangle ux:Name="middleRectangle" Height="2" Width="26" Color="#eee" />
+								<Rectangle ux:Name="bottomRectangle" Height="2" Width="26" Color="#eee">
+									<Translation Y="9" ux:Name="bottomMenuTranslation" />
+									<Rotation ux:Name="bottomMenuRotation" />
+								</Rectangle>
+
+								
+							</Panel>
+						</StackPanel>
+
+
+
+						<Text Value="Menu" ux:Name="Header" Alignment="Center" Color="#fff" FontSize="20" Font="Helvetica"/>
+
+						<DropShadow Distance="3" Angle="72" Size="8" />
+
+					</Panel>
 				</StackPanel>
 
+				<PageControl ux:Name="cards" Padding="24,32,24,8">
 
+					<Each Items="{cards}">
 
-				<Text Value="Menu" ux:Name="Header" Alignment="Center" Color="#fff" FontSize="20" />
-
-
-
-			</Panel>
-		</StackPanel>
-
-		<PageControl ux:Name="cards" Padding="24,32,24,8">
-			
-			<Each Items="{cards}">
-				
-				<Manna.Card Item="{item}" Cover="{cover}" Price="Price: {price}" Description="{description}" Category="{category}" Color="#FFFFFF00">
+						<Manna.Card Item="{item}" Cover="{cover}" Price="Price: {price}" Description="{description}" Category="{category}" Color="#FFFFFF00" />
 					<!--<WhileActive Threshold=".5">
 						<Set topColor.Value="{topColor}" />
 						<Set bottomColor.Value="{bottomColor}" />
 					</WhileActive>-->
 					
-				</Manna.Card>
 
-			</Each>
+				</Each>
 
-		</PageControl>
+			</PageControl>
+		</DockPanel>
+	</Page>
 
-	</DockPanel>
+</EdgeNavigator>
 
 	<!--<Attractor ux:Name="topColor" Target="colorTop.Color" Value="#fff3bd" Type="Easing" Duration="0.2" DurationExp="0" />
 	<Attractor ux:Name="bottomColor" Target="colorBottom.Color" Value="#b86b00" Type="Easing" Duration="0.2" DurationExp="0" />-->
 
 	<Rectangle Alignment="Default" Color="#97292901">
-		<ImageFill File="../Assets/WoodBoards.png" StretchMode="UniformToFill"/>
+		<ImageFill File="../Assets/WoodBoards.png" StretchMode="UniformToFill" />
 
-		<!--<LinearGradient StartPoint="0,0" EndPoint="0,1" AngleDegrees="72">
-			<GradientStop ux:Name="colorTop" Offset="0" Color="#fff3bd" />
-			<GradientStop ux:Name="colorBottom" Offset="1" Color="#b86b00" />
-		</LinearGradient>-->
-	</Rectangle>
-	
-</DockPanel>
+			<!--<LinearGradient StartPoint="0,0" EndPoint="0,1" AngleDegrees="72">
+				<GradientStop ux:Name="colorTop" Offset="0" Color="#fff3bd" />
+				<GradientStop ux:Name="colorBottom" Offset="1" Color="#b86b00" />
+			</LinearGradient>-->
+		</Rectangle>
+	</DockPanel>
