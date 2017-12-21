@@ -25,7 +25,7 @@
 				<Move Vector="1" RelativeTo="PositionChange" Duration=".5" DurationBack=".4" Easing="QuarticOut" EasingBack="QuarticIn" />
 			</LayoutAnimation>
 
-			<ImageFill File="{ReadProperty Cover}" StretchMode="UniformToFill" WrapMode="ClampToEdge" />
+			<ImageFill Url="{ReadProperty Cover}" StretchMode="UniformToFill" WrapMode="ClampToEdge" />
 			<Stroke Width="1" Color="#fff3" />
 			<DropShadow Distance="5" Angle="72" Size="8" />
 		</Rectangle>

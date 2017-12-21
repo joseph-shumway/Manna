@@ -99,7 +99,7 @@
 
 				<PageControl ux:Name="cards" Padding="24,32,24,8">
 
-					<Each Items="{cards}">
+					<Each Items="{cardsMenu}">
 
 						<Manna.Card Item="{item}" Cover="{cover}" Price="Price: {price}" Description="{description}" Category="{category}" Color="#FFFFFF00" />
 					<!--<WhileActive Threshold=".5">
